@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <form action="processar_formulário.php" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" required> <br><br>
+        
+        <label for="emil">E-mail:</label>
+        <input type="email" id="email" name="email" required> <br><br>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required> <br><br>
+
+        <label for="celular">Celular:</label>
+        <input type="tel" id="celular" name="celular" placeholder="(99) 9999-9999" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" required> <br><br>
+
+        <label for="data">Data</label>
+        <input type="date" id="data" name="data" required> <br><br>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora"  name="hora"required> <br><br>
+
+        <label for="aulas">Aulas:</label>
+        <input type="number" id="aulas"  name="aulas"required> <br><br>
+
+        <label for="nível">Nível:</label>
+        <select id="nivel"  name="nivel"required>
+            <option value="Iniciante">Iniciante</option>
+            <option value="Intermediario">Intermediário</option>  
+            <option value="Avançado">Avançado</option>
+        </select><br><br>
+        
+        <label>Gênero</label>
+        <input type="radio" id="feminino" name="genero" value="feminino" required>
+        <label for="feminino">Feminino</label>
+        <input type="radio" id="masculino" name="genero" value="masculino" required>
+        <label for="feminino">Masculino</label><br><br>
+
+        <label>Atividades:</label>
+        <input type="checkbox" id="treino-leve" name="tividades[]" value="treino-leve">
+        <label for="treino-leve">Treino Leve</label>
+
+        <input type="checkbox" id="aprimoramento" name="tividades[]" value="aprimoramento">
+        <label for="aprimoramento">Aprimoramento</label>
+
+        <input type="checkbox" id="aula-demo" name="tividades[]" value="aula-demo">
+        <label for="aula-demo">Aula Demonstrativa</label><br><br>
+    
+
+        <label for="observacoes">Observações:</label><br>
+        <textarea id="observacoes" name="observacoes" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Cancelar</button>
+
+    </form>
+    
+</body>
+</html>
